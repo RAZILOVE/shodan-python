@@ -69,4 +69,14 @@ items:
         '1':
           status: passed
           note: י
+  - name: |
+      Use temporary credentials
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-temp-creds.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          status: passed
+          note: ו
 
