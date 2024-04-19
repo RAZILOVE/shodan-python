@@ -13,4 +13,15 @@ items:
   - name: Generate a Software Bill of Materials (SBOM)
     uses: >-
       jitsecurity-controls/jit-plans/items/code/item-software-bill-of-materials.yml@latest
+  - name: |
+      Grant least privilege access
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-least-privilege.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          status: passed
+          note: |
+            ץ
 
