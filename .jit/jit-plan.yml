@@ -24,4 +24,14 @@ items:
           status: passed
           note: |
             ץ
+  - name: |
+      Manage access based on life cycle
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-manage-access-lifecycle.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          status: passed
+          note: ץ
 
