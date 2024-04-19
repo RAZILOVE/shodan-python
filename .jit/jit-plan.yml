@@ -124,4 +124,15 @@ items:
     input:
       status: passed
       note: כ
+  - name: >
+      Establish a process to ensure that all required compliance standards are
+      met
+    uses: >-
+      jitsecurity-controls/jit-plans/items/regulatory_compliance_validation_process/item-regulatory-compliance-process.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          status: passed
+          note: כ
 
