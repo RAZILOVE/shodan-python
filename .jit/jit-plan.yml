@@ -44,4 +44,8 @@ items:
         '1':
           status: passed
           note: ץ
+  - name: |
+      Ensure all credentials used by your applications are not hard-coded
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
 
