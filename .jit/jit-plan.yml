@@ -53,9 +53,20 @@ items:
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-store-secrets.yml@latest
     input:
+      status: null
       note: ''
       requirements:
         '1':
           status: passed
           note: ל
+  - name: |
+      Encrypt all end user/customer credentials and hash passwords at rest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-encrypt-creds-at-rest.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          status: passed
+          note: י
 
