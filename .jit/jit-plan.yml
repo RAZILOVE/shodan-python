@@ -103,4 +103,11 @@ items:
     input:
       status: passed
       note: י
+  - name: |
+      Clear requirements of the FTR checklist
+    uses: >-
+      jitsecurity-controls/jit-plans/items/optional_level/item-optional-understand.yml@latest
+    input:
+      status: passed
+      note: י
 
