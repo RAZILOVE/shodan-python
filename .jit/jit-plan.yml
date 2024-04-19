@@ -110,4 +110,11 @@ items:
     input:
       status: passed
       note: י
+  - name: |
+      Collaboration on preperation of the FTR checklist
+    uses: >-
+      jitsecurity-controls/jit-plans/items/optional_level/item-optional-people-involved.yml@latest
+    input:
+      status: passed
+      note: כע
 
