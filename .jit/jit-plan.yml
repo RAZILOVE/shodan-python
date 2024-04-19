@@ -48,4 +48,14 @@ items:
       Ensure all credentials used by your applications are not hard-coded
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
+  - name: |
+      Store secrets securely
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-store-secrets.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          status: passed
+          note: ל
 
