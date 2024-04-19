@@ -117,4 +117,11 @@ items:
     input:
       status: passed
       note: כע
+  - name: |
+      Time spent on FTR preperation
+    uses: >-
+      jitsecurity-controls/jit-plans/items/optional_level/item-optional-time-spent.yml@latest
+    input:
+      status: passed
+      note: כ
 
