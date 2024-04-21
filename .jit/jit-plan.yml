@@ -1,5 +1,6 @@
 name: My plan
 level: beginner
+update_id: b70510da-606b-4907-84da-84a53d0a1d12
 author: Jit
 version: 0.1
 owners:
@@ -8,131 +9,125 @@ references:
   - https://www.jit.io
 tags: []
 items:
+  - name: Ensure all credentials used by your applications are not hard-coded
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
+  - name: Audit identities quarterly
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-audit.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          note: "\u05E5"
+          status: passed
+      status: null
+  - name: Encrypt all end user/customer credentials and hash passwords at rest
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-encrypt-creds-at-rest.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          note: "\u05D9"
+          status: passed
+      status: null
+  - name: Grant least privilege access
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-least-privilege.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          note: "\u05E5\n"
+          status: passed
+      status: null
+  - name: Manage access based on life cycle
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-manage-access-lifecycle.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          note: "\u05E5"
+          status: passed
+      status: null
+  - name: Store secrets securely
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-store-secrets.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          note: "\u05DC"
+          status: passed
+      status: null
+  - name: Use temporary credentials
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-temp-creds.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          note: "\u05D5"
+          status: passed
+      status: null
+  - name: Additional feedback for the FTR submission process
+
+    uses: jitsecurity-controls/jit-plans/items/optional_level/item-optional-ftr-submission.yml@latest
+    input:
+      note: "\u05D9"
+      requirements: null
+      status: passed
+  - name: Clear implementation of the FTR checklist
+
+    uses: jitsecurity-controls/jit-plans/items/optional_level/item-optional-implementation.yml@latest
+    input:
+      note: "\u05E2"
+      requirements: null
+      status: passed
+  - name: Collaboration on preperation of the FTR checklist
+
+    uses: jitsecurity-controls/jit-plans/items/optional_level/item-optional-people-involved.yml@latest
+    input:
+      note: "\u05DB\u05E2"
+      requirements: null
+      status: passed
+  - name: Time spent on FTR preperation
+
+    uses: jitsecurity-controls/jit-plans/items/optional_level/item-optional-time-spent.yml@latest
+    input:
+      note: "\u05DB"
+      requirements: null
+      status: passed
+  - name: Clear requirements of the FTR checklist
+
+    uses: jitsecurity-controls/jit-plans/items/optional_level/item-optional-understand.yml@latest
+    input:
+      note: "\u05D9"
+      requirements: null
+      status: passed
+  - name: Establish a process to ensure that all required compliance standards are met
+
+    uses: jitsecurity-controls/jit-plans/items/regulatory_compliance_validation_process/item-regulatory-compliance-process.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          note: "\u05DB"
+          status: passed
+      status: null
+  - name: Perform vulnerability management
+
+    uses: jitsecurity-controls/jit-plans/items/operational_security/item-secops-vulnerabiliy-mgt.yml@latest
+    input:
+      note: ''
+      requirements:
+        '1':
+          note: "\u05DB"
+          status: passed
+      status: null
   - name: Scan code for hard-coded secrets
     uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
   - name: Generate a Software Bill of Materials (SBOM)
-    uses: >-
-      jitsecurity-controls/jit-plans/items/code/item-software-bill-of-materials.yml@latest
-  - name: |
-      Grant least privilege access
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-least-privilege.yml@latest
-    input:
-      note: ''
-      requirements:
-        '1':
-          status: passed
-          note: |
-            ץ
-  - name: |
-      Manage access based on life cycle
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-manage-access-lifecycle.yml@latest
-    input:
-      note: ''
-      requirements:
-        '1':
-          status: passed
-          note: ץ
-  - name: |
-      Audit identities quarterly
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-audit.yml@latest
-    input:
-      note: ''
-      requirements:
-        '1':
-          status: passed
-          note: ץ
-  - name: |
-      Ensure all credentials used by your applications are not hard-coded
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
-  - name: |
-      Store secrets securely
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-store-secrets.yml@latest
-    input:
-      status: null
-      note: ''
-      requirements:
-        '1':
-          status: passed
-          note: ל
-  - name: |
-      Encrypt all end user/customer credentials and hash passwords at rest
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-encrypt-creds-at-rest.yml@latest
-    input:
-      note: ''
-      requirements:
-        '1':
-          status: passed
-          note: י
-  - name: |
-      Use temporary credentials
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-temp-creds.yml@latest
-    input:
-      note: ''
-      requirements:
-        '1':
-          status: passed
-          note: ו
-  - name: |
-      Perform vulnerability management
-    uses: >-
-      jitsecurity-controls/jit-plans/items/operational_security/item-secops-vulnerabiliy-mgt.yml@latest
-    input:
-      note: ''
-      requirements:
-        '1':
-          status: passed
-          note: כ
-  - name: |
-      Clear implementation of the FTR checklist
-    uses: >-
-      jitsecurity-controls/jit-plans/items/optional_level/item-optional-implementation.yml@latest
-    input:
-      status: passed
-      note: ע
-  - name: |
-      Additional feedback for the FTR submission process
-    uses: >-
-      jitsecurity-controls/jit-plans/items/optional_level/item-optional-ftr-submission.yml@latest
-    input:
-      status: passed
-      note: י
-  - name: |
-      Clear requirements of the FTR checklist
-    uses: >-
-      jitsecurity-controls/jit-plans/items/optional_level/item-optional-understand.yml@latest
-    input:
-      status: passed
-      note: י
-  - name: |
-      Collaboration on preperation of the FTR checklist
-    uses: >-
-      jitsecurity-controls/jit-plans/items/optional_level/item-optional-people-involved.yml@latest
-    input:
-      status: passed
-      note: כע
-  - name: |
-      Time spent on FTR preperation
-    uses: >-
-      jitsecurity-controls/jit-plans/items/optional_level/item-optional-time-spent.yml@latest
-    input:
-      status: passed
-      note: כ
-  - name: >
-      Establish a process to ensure that all required compliance standards are
-      met
-    uses: >-
-      jitsecurity-controls/jit-plans/items/regulatory_compliance_validation_process/item-regulatory-compliance-process.yml@latest
-    input:
-      note: ''
-      requirements:
-        '1':
-          status: passed
-          note: כ
-
+    uses: jitsecurity-controls/jit-plans/items/code/item-software-bill-of-materials.yml@latest
