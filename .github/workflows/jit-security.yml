@@ -31,7 +31,6 @@ jobs:
       uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-gitleaks-alpine:latest
-        security_control_output_file: /tmp/report.json
         
   software-bill-of-materials:
     if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'software-bill-of-materials' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sbom'
